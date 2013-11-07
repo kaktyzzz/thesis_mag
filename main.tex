@@ -1,0 +1,111 @@
+\documentclass[candidate,subf,href,colorlinks=true
+%,fixint=false
+%,times
+%,facsimile
+%,classified
+]{disser}
+
+\usepackage[
+  a4paper, mag=1000, includefoot,
+  left=3cm, right=1cm, top=2cm, bottom=2cm, headsep=1cm, footskip=1cm
+]{geometry}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{comment}
+\ifpdf\usepackage{epstopdf}\fi
+
+\usepackage{listings}
+\lstloadlanguages{Delphi,C++,Java,HTML,PHP}
+\lstset{numbers=left,language=C++,postbreak=\space, breakindent=5pt,breakautoindent
+=false,breaklines,tabsize=2,extendedchars=true,escapechar=|,frame=,commentstyle=\itshape,stringstyle=\bfseries}
+
+\usepackage{algpseudocode}
+\usepackage{algorithm} 
+
+\usepackage{longtable}
+%\usepackage{algorithmicx} 
+
+% Номера страниц сверху и по центру
+%\def\headfont{\small}
+%\pagestyle{headcenter}
+%\chapterpagestyle{empty}
+\setcounter{tocdepth}{2}
+% Ссылки на работы соискателя включаются в общий список литературы
+\let\citemy=\cite
+
+% Использовать полужирное начертание для векторов
+\let\vec=\mathbf
+
+% Путь к файлам с иллюстрациями
+\graphicspath{{images/}}
+
+\begin{document}
+% Включение файла с общим текстом диссертации и автореферата
+% (текст титульного листа и характеристика работы).
+\input{common}
+
+% номер копии для грифа секретности
+%\copynum{1}
+% класс доступа
+%\classlabel{Для служебного пользования}
+
+\title{МАГИСТЕРСКАЯ ДИССЕРТАЦИЯ\\}
+
+\maketitle
+
+%%
+%% Titlepage in English
+%%
+%
+%\institution{Name of Organization}
+%
+%\title{PhD Thesis}
+%
+%% Topic
+%\topic{Dummy Title}
+%
+%% Author
+%\author{Author's Name}
+%
+%\specnum{01.04.05}
+%\spec{Optics}
+%
+%%\specsndnum{01.04.07}
+%%\specsnd{Condensed matter physics}
+%
+%\sa{I.\,I.~Ivanov}
+%\sastatus{Professor}
+%%\sasnd{P.\,P.~Petrov}
+%%\sasndstatus{Professor}
+%
+%% Scientific consultant
+%%\scon{B.\,B.~Baranov}
+%%\sconstatus{Professor}
+%
+%% City & Year
+%\city{Saint Petersburg}
+%\date{\number\year}
+%
+%\maketitle[en]
+
+\tableofcontents
+
+\input{intro}
+%\input{review}
+\input{1}
+\input{2}
+\input{3}
+\input{4}
+\input{concl}
+
+\bibliography{main}
+\bibliographystyle{gost705s}
+% в порядке упоминания
+% \bibliographystyle{unsrt}
+
+\appendix
+\input{app-a}
+\end{document}
